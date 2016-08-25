@@ -4,6 +4,20 @@ never need to use partials as functions.
 
 ## Installation
 
+Run this from the terminal:
+
+```bash
+composer require balping/laravel-blade-function
+```
+
+Add this line to the `providers` array in `config/app.php`:
+
+```php
+Balping\BladeFunction\BladeFunctionServiceProvider::class,
+```
+
+That's it.
+
 ## How to use it
 
 You can declare and use functions in views like so:
@@ -23,7 +37,7 @@ You can declare and use functions in views like so:
 ```
 
 The `@function` directive accepts the function name and the argument list as parameter.
-If your function doesn't need arguments, you can omit the parantheses:
+If your function doesn't need arguments, you can omit the parentheses:
 
 ```blade
 {{-- Both are correct: --}}
@@ -37,7 +51,7 @@ If your function doesn't need arguments, you can omit the parantheses:
 @endfunction
 ```
 
-In this case you can omit the parantheses when calling the function as well: `@printhello()` and `@printhello` are both correct.
+In this case you can omit the parentheses when calling the function as well: `@printhello()` and `@printhello` are both correct.
 
 You can use any other blade directives inside your functions:
 
@@ -65,8 +79,8 @@ There's also a `@return` directive, just in case. But you probably won't need th
 ## Gotchas and Things to Be Aware of
 
 Unlike in PHP in general, blade functions must be declared **before** calling them! Just like in the good old C days.
-But while in C you can use header files for this reason, in this case functions must be daclared **in the same view file**
-where you use them. However this shouldn't be a problem, please see the When (not) to use it section.
+But while in C you can use header files for this reason, in this case functions must be declared **in the same view file**
+where you use them. However this shouldn't be a problem, please see the [When (not) to use it](#when-not-to-use-it) section.
 
 When you declare a function using the `@function` directive, the function will be a real PHP function and it will be
 in the global namespace. This means that you can't use PHP keywords and already declared functions as function name.
@@ -85,12 +99,12 @@ the `$__env` variable manually. (This is used by blade for various things, ex. i
 This package is meant to help *presenting* small things. But only where blade syntax comes handy.
 
 I created this package because many times I found myself 
-treating partials as functions. Which can be pretty ugly and unconvinient, especially when you  pass some data *as argument*.
-So I'd say, when you  want to extract some *blade* code, but you don't feel like putting it into a seperate partial view,
-that's when you probably want to use a blade function. It might be also a good idea to wrap partial includes in functions (see example below).
+treating partials as functions. Which can be pretty ugly and convenient, especially when you  pass some data *as argument*.
+So I'd say, when you  want to extract some *blade* code, but you don't feel like putting it into a separate partial view,
+that's when you probably want to use a blade function. It might be also a good idea to wrap partial includes in functions ([see example below](#wrapping-partials)).
 
-Keep in mind, that in most cases it is a good idea to separete logic and presentation. 
-So you shouldn't use this for parsing data or calculatig fibonacci numbers (however you can, see the examples). It's neither the best choice
+Keep in mind, that in most cases it is a good idea to separate logic and presentation. 
+So you shouldn't use this for parsing data or calculating factorial series (however you can, see the [example](#factorials)). It's neither the best choice
 for helper functions where you format some data without html (ex.: you can create an `app/Http/helpers.php`  file where you can add your custom
 date formatting functions, etc.)
 
@@ -127,7 +141,7 @@ Much cleaner, isn't it?
 
 ### Factorials
 
-You shouldn't do this. I mean you really shoudn't. This is not what blade is designed for. But yeah, now you can do recursion :-P
+You shouldn't do this. I mean you really shouldn't. This is not what blade is designed for. But yeah, now you can do recursion :-P
 
 ```blade
 @function(factorials ($n))
