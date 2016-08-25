@@ -141,7 +141,7 @@ Much cleaner, isn't it?
 
 ### Factorials
 
-You shouldn't do this. I mean you really shouldn't. This is not what blade is designed for. But yeah, now you can do recursion :-P
+You shouldn't do this. I mean you really shouldn't. This is not what blade is designed for. But yeah, now you can do recursion using bladish syntax :-P
 
 ```blade
 @function(factorials ($n))
