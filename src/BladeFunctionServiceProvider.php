@@ -68,6 +68,10 @@ class BladeFunctionServiceProvider extends ServiceProvider
             return "<?php function $name ( $params  \$__env ) { ?>";
         });
 
+        Blade::directive('return', function($expression) {
+            return "<?php return ($expression); ?>";
+        });
+
         Blade::directive('endfunction', function() {
             return "<?php } ?>";
         });
