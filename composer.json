@@ -1,0 +1,21 @@
+{
+    "name": "balping/laravel-blade-function",
+    "description": "This Laravel package lets you declare functions inside blade templates.",
+    "license": "MIT",
+    "keywords": ["laravel", "blade", "template", "function", "directive"],
+    "authors": [
+        {
+            "name": "Balázs Kovács",
+            "email": "balping314@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Balping\\BladeFunction\\": "src/"
+        }
+    }
+}
