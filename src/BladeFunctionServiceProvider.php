@@ -63,7 +63,7 @@ class BladeFunctionServiceProvider extends ServiceProvider
 
             /**
              * Define the global function
-             * Call this like: foo('bar')
+             * Call this like: foo('bar', $__env)
              */
             return "<?php function $name ( $params  \$__env ) { ?>";
         });
