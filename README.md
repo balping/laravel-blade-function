@@ -116,7 +116,7 @@ This looks like a common situation:
 
 ```blade
 @include('partials.modal', [
-	'header' => '',
+	'header' => 'Alert',
 	'body'   => 'Something terrible happened.'
 ])
 ```
