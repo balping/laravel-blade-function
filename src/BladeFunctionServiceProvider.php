@@ -15,6 +15,16 @@ class BladeFunctionServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::directive('function', function($expression) {
+
+            /**
+             * Remove () wrapper in 5.1 and 5.2
+             * @link https://github.com/laravel/docs/blob/5.3/upgrade.md#custom-directives
+             */
+            
+            if(LaravelVersion::max(5.2)){
+                $expression = substr($expression, 1, -1);
+            }
+
             /**
              * Get the function name
              * 
@@ -43,6 +53,15 @@ class BladeFunctionServiceProvider extends ServiceProvider
              * Call this like: @foo('bar')
              */
             Blade::directive($name, function($expression) use ($name) {
+                /**
+                 * Remove () wrapper in 5.1 and 5.2
+                 * @link https://github.com/laravel/docs/blob/5.3/upgrade.md#custom-directives
+                 */
+ 
+                if(LaravelVersion::max(5.2)){
+                    $expression = substr($expression, 1, -1);
+                }
+
                 /**
                  * We only need a comma if there are arguments passed
                  */

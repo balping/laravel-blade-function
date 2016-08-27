@@ -2,6 +2,8 @@
 This Laravel package lets you declare functions inside blade templates. After installing it, you'll
 never need to use partials as functions.
 
+This package is compatible with Laravel 5.1, 5.2 and 5.3
+
 ## Installation
 
 Run this from the terminal:
@@ -163,8 +165,3 @@ You shouldn't do this. I mean you really shouldn't. This is not what blade is de
 ## Contributions
 
 Any contributions are welcome. Probably there is a much better way to do this, since there's a way to add extensions and custom compilers to blade. But it's undocumented and I'm not into Laravel *that* deep to understand what's going on in the blade parser. If you do know more, please help me to rewrite this. I really don't like that functions must be defined first, in the same file and it is also ugly that you have to pass `$__env` each time.
-
-
-
-
-
