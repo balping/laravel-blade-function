@@ -5,8 +5,7 @@
     "keywords": ["laravel", "blade", "template", "function", "directive"],
     "authors": [
         {
-            "name": "Balázs Kovács",
-            "email": "balping314@gmail.com"
+            "name": "Balázs Kovács"
         }
     ],
     "require": {
