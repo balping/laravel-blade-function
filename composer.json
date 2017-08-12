@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "^5.1"
+        "illuminate/support": "^5.1",
+        "balping/laravel-version": "^1.0.0"
     },
 
     "autoload": {

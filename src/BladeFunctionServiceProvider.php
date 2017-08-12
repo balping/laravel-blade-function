@@ -4,6 +4,7 @@ namespace Balping\BladeFunction;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Balping\LaravelVersion\LaravelVersion;
 
 class BladeFunctionServiceProvider extends ServiceProvider
 {
