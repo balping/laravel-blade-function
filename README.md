@@ -2,7 +2,7 @@
 This Laravel package lets you declare functions inside blade templates. After installing it, you'll
 never need to use partials as functions.
 
-This package is compatible with Laravel 5.1, 5.2, 5.3 and 5.4
+This package is compatible with Laravel 5.1, 5.2, 5.3, 5.4 and 5.5
 
 In Laravel 5.4 [components](https://laravel.com/docs/5.4/blade#components-and-slots) were introduced. There is an overlap between the problems componenets and this package try to solve. So from 5.4 you might want to consider using componenets instead. They are different though and this package might still provide a cleaner and easier solution in some cases.
 
