@@ -2,7 +2,7 @@
 This Laravel package lets you declare functions inside blade templates. After installing it, you'll
 never need to use partials as functions.
 
-This package is compatible with Laravel 5.1, 5.2, 5.3, 5.4 and 5.5
+This package is compatible with Laravel 5.1, 5.2, 5.3, 5.4, 5.5 and 5.6
 
 In Laravel 5.4 [components](https://laravel.com/docs/5.4/blade#components-and-slots) were introduced. There is an overlap between the problems componenets and this package try to solve. So from 5.4 you might want to consider using componenets instead. They are different though and this package might still provide a cleaner and easier solution in some cases.
 
@@ -13,6 +13,8 @@ Run this from the terminal:
 ```bash
 composer require balping/laravel-blade-function
 ```
+
+If you are using Laravel >=5.5, this step is unnecessary, thanks to [package auto-discovery](https://laravel.com/docs/packages#package-discovery).
 
 Add this line to the `providers` array in `config/app.php`:
 

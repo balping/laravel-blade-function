@@ -5,7 +5,7 @@
     "keywords": ["laravel", "blade", "template", "function", "directive"],
     "authors": [
         {
-            "name": "Balázs Kovács"
+            "name": "Balázs Dura-Kovács"
         }
     ],
     "require": {
@@ -16,6 +16,14 @@
     "autoload": {
         "psr-4": {
             "Balping\\BladeFunction\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Balping\\BladeFunction\\BladeFunctionServiceProvider"
+            ]
         }
     }
 }
