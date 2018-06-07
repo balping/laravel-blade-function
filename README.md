@@ -1,3 +1,9 @@
+## Moved to GitLab
+
+**Warning**: This project has been moved to GitLab: https://gitlab.com/balping/laravel-blade-function
+
+----
+
 # Laravel Blade Function
 This Laravel package lets you declare functions inside blade templates. After installing it, you'll
 never need to use partials as functions.
